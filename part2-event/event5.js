@@ -1,26 +1,15 @@
-// var button = document.getElementById('button');
-// var box = document.getElementById('box');
-
-// box.addEventListener('mouseenter', runEvent);
-
-// box.addEventListener('mouseover', runEvent);
-
-// box.addEventListener('mousemove', runEvent);
-
-// var output = document.querySelector('.output');
-
 var itemInput = document.querySelector('input[type="text"]');
+//targets input box on index.html
 var form = document.querySelector('form');
 
-itemInput.addEventListener('keydown', runEvent);
-
-//logs the mouse simply moving so will be hundreds or thousands of events 
-function runEvent(e) {
+itemInput.addEventListener('keydown', RrrunEvent);
+//event listener:: listens to any key being pressed::: upon being pressed it starts the RrrrunEvent function below
+function RrrunEvent(e) {
     console.log('event type:'+e.type);
-
-    // output.innerHTML = '<h3>MouseX: '+e.offsetX+' </h3><h3>MouseY: '+e.offsetY+ '</h3>';
-
+//logs event type only one ANY KEY PRESSED 
+    console.log(e.target.value);
+    //logs what was pressed
+    document.getElementById('output').innerHTML = '<h3>'+e.target.value+'</h3>';
+//targets output id div on the bottom of page
+//changes the html to the value of target.  the value of target is linked back to itemInput.  itemInput is the form.  so... it goes from the var itemInput the event listener is listening for input on that... it then is pussed to the function... the function finds the div id of output and changes the text inside using inner item to whatever was typed in the box
 }
-//when you move the mouse inside of the pink box on the webpage it will now display the x and y coordinates of the mouse, pretty cool 
-
-//MISTAKE Again your link in the js file is NOT LINKING to the dom... you used someone else's files not the official files that the video offers this causes a lot of problems.  
