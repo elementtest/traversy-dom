@@ -60,5 +60,18 @@ function removeItem(e){
 
 function filterItems(e){
    var text = e.target.value.toLowerCase();
-   console.log(e);
+   var items = itemList.getElementsByTagName('li');
+    
+    
+   //there are certain things you cannot do with an html collection you need to turn it into an array 
+
+   Array.from(items).forEach(function(item){
+       var itemName = item.firstChild.textContent;
+       if(itemName.toLowerCase().indexOf(text) != -1) {
+            item.style.display = 'block';
+       } else {
+        item.style.display = 'none';
+       }
+   });
+
 }
