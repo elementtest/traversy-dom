@@ -1,0 +1,26 @@
+myBtn.addEventListener('click', DtripDFunction);
+
+function DtripDFunction(e) {
+
+}
+
+this e is an object containing information about the event which has just occured 
+
+click event contains information about the click
+
+keyup event contains information about the keyup
+
+submit event contains information about how it was submitted etc
+
+typically you are going to find them on add event listener
+
+all of these properties well the properties of the event that was triggered, click, keyup, submit, what have you can all be taken advantage of 
+
+i.e. can check if the control key was presse by using e.ctrlkey in an if statment
+
+there are many different types of events in javascript 
+
+mouse event is one of the most popular... drag event
+pointer event zoom event 
+
+clipboard event
